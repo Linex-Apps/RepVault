@@ -47,7 +47,7 @@ export async function fetchGoogleReviews(placeId) {
     );
   }
 
-  const fields = 'places.reviews,places.rating,places.userRatingCount';
+  const fields = 'reviews,rating,userRatingCount';
   const url = `${PLACES_API_BASE}/places/${encodeURIComponent(placeId)}?fields=${fields}`;
 
   const response = await fetch(url, {
